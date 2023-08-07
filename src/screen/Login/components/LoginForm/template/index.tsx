@@ -34,9 +34,6 @@ export default function TemplateLoginForm({
         <Form.Root
             onSubmit={(event) => {
                 event.preventDefault()
-                console.log('username', username.current)
-                console.log('password', password.current)
-                console.log('============')
                 if (
                     username.current === 'raskova' &&
                     password.current === 'churrasco2023'
