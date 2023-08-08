@@ -109,48 +109,38 @@ const TaskDetailsScreen = () => {
                                 value="01/01/2023"
                                 size={1}
                             />
-                        </TaskDetails.ContentRow>
-                        <TaskDetails.ContentRow>
                             <TaskDetails.SimpleInput
                                 label="ATA Title"
                                 value="Equipments & Furnishing"
-                                size={3}
+                                size={1}
                             />
+                        </TaskDetails.ContentRow>
+                        <TaskDetails.ContentRow>
                             <TaskDetails.SimpleInput
                                 label="Task Number"
                                 value="25/66/00/000/000/016"
-                                size={3}
+                                size={2.5}
                             />
                             <TaskDetails.SimpleInput
                                 label="Task Status (N.R)"
                                 value="N"
-                                size={0.5}
-                            />
-                            <TaskDetails.SimpleInput
-                                label="Task Title"
-                                value={tasks?.taskName ?? ''}
-                                size={0.5}
-                            />
-                        </TaskDetails.ContentRow>
-                        <TaskDetails.ContentRow>
-                            <TaskDetails.SimpleInput
-                                label="Climatic Condition"
-                                value="Salt-laden atmosphere"
                                 size={2.5}
                             />
+                            {/* <TaskDetails.SimpleInput
+                                label="Task Title"
+                                value={tasks?.taskName ?? ''}
+                                size={1}
+                            /> */}
                             <TaskDetails.SimpleInput
                                 label="MOD"
                                 value="PRE MOD 074957"
                                 size={2.5}
                             />
-                            <div
-                                className={genericStyle({
-                                    css: {
-                                        display: 'flex',
-                                        flexGrow: 3.9
-                                    }
-                                })}
-                            ></div>
+                            <TaskDetails.SimpleInput
+                                label="Climatic Condition"
+                                value="Salt-laden atmosphere"
+                                size={2.5}
+                            />
                         </TaskDetails.ContentRow>
                         <TaskDetails.ContentRow>
                             <TaskDetails.Description
@@ -195,51 +185,49 @@ const TaskDetailsScreen = () => {
                             <TaskDetails.SimpleInput
                                 label="HUMS"
                                 value=""
-                                size={1.5}
+                                size={1}
                                 green
                             />
                             <TaskDetails.SimpleInput
                                 label="Sampling Threshold"
                                 value=""
-                                size={1.5}
+                                size={1}
                                 green
                             />
                             <TaskDetails.SimpleInput
                                 label="Limit 1"
                                 value="600"
-                                size={1.5}
+                                size={1}
                                 green
                             />
                             <TaskDetails.SimpleInput
                                 label="Unit 1"
                                 value="FH"
-                                size={1.5}
+                                size={1}
                                 green
                             />
-                        </TaskDetails.ContentRow>
-                        <TaskDetails.ContentRow>
                             <TaskDetails.SimpleInput
                                 label="Provisional 1"
                                 value="No"
-                                size={1.5}
+                                size={1}
                                 green
                             />
                             <TaskDetails.SimpleInput
                                 label="FS 1"
                                 value=""
-                                size={1.5}
+                                size={1}
                                 green
                             />
                             <TaskDetails.SimpleInput
                                 label="Margin 1"
                                 value="60"
-                                size={1.5}
+                                size={1}
                                 green
                             />
                             <TaskDetails.SimpleInput
                                 label="Margin Unit 1"
                                 value="FH"
-                                size={1.5}
+                                size={1}
                                 green
                             />
                         </TaskDetails.ContentRow>
@@ -247,51 +235,49 @@ const TaskDetailsScreen = () => {
                             <TaskDetails.SimpleInput
                                 label="HUMS"
                                 value=""
-                                size={1.5}
+                                size={1}
                                 blue
                             />
                             <TaskDetails.SimpleInput
                                 label="Sampling Threshold"
                                 value=""
-                                size={1.5}
+                                size={1}
                                 blue
                             />
                             <TaskDetails.SimpleInput
                                 label="Limit 2"
                                 value="600"
-                                size={1.5}
+                                size={1}
                                 blue
                             />
                             <TaskDetails.SimpleInput
                                 label="Unit 2"
                                 value="FH"
-                                size={1.5}
+                                size={1}
                                 blue
                             />
-                        </TaskDetails.ContentRow>
-                        <TaskDetails.ContentRow>
                             <TaskDetails.SimpleInput
                                 label="Provisional 2"
                                 value="No"
-                                size={1.5}
+                                size={1}
                                 blue
                             />
                             <TaskDetails.SimpleInput
                                 label="FS 2"
                                 value=""
-                                size={1.5}
+                                size={1}
                                 blue
                             />
                             <TaskDetails.SimpleInput
                                 label="Margin 2"
                                 value="60"
-                                size={1.5}
+                                size={1}
                                 blue
                             />
                             <TaskDetails.SimpleInput
                                 label="Margin Unit 2"
                                 value="FH"
-                                size={1.5}
+                                size={1}
                                 blue
                             />
                         </TaskDetails.ContentRow>
@@ -299,52 +285,77 @@ const TaskDetailsScreen = () => {
                             <TaskDetails.SimpleInput
                                 label="HUMS"
                                 value=""
-                                size={1.5}
+                                size={1}
                                 gray
                             />
                             <TaskDetails.SimpleInput
                                 label="Sampling Threshold"
                                 value=""
-                                size={1.5}
+                                size={1}
                                 gray
                             />
                             <TaskDetails.SimpleInput
                                 label="Limit 3"
                                 value="600"
-                                size={1.5}
+                                size={1}
                                 gray
                             />
                             <TaskDetails.SimpleInput
                                 label="Unit 3"
                                 value="FH"
-                                size={1.5}
+                                size={1}
                                 gray
                             />
-                        </TaskDetails.ContentRow>
-                        <TaskDetails.ContentRow>
                             <TaskDetails.SimpleInput
                                 label="Provisional 3"
                                 value="No"
-                                size={1.5}
+                                size={1}
                                 gray
                             />
                             <TaskDetails.SimpleInput
                                 label="FS 3"
                                 value=""
-                                size={1.5}
+                                size={1}
                                 gray
                             />
                             <TaskDetails.SimpleInput
                                 label="Margin 3"
                                 value="60"
-                                size={1.5}
+                                size={1}
                                 gray
                             />
                             <TaskDetails.SimpleInput
                                 label="Margin Unit 3"
                                 value="FH"
-                                size={1.5}
+                                size={1}
                                 gray
+                            />
+                        </TaskDetails.ContentRow>
+                        <TaskDetails.ContentRow>
+                            <TaskDetails.SimpleInput
+                                label="Ref Manual"
+                                value=""
+                                size={1}
+                            />
+                            <TaskDetails.SimpleInput
+                                label="Documentation"
+                                value=""
+                                size={1}
+                            />
+                            <TaskDetails.SimpleInput
+                                label="Source Document / Code MRB"
+                                value=""
+                                size={1}
+                            />
+                            <TaskDetails.SimpleInput
+                                label="Zones"
+                                value=""
+                                size={1}
+                            />
+                            <TaskDetails.SimpleInput
+                                label="K-Factor"
+                                value=""
+                                size={1}
                             />
                         </TaskDetails.ContentRow>
                     </TaskDetails.Root>

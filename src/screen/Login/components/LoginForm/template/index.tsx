@@ -38,10 +38,10 @@ export default function TemplateLoginForm({
                     username.current === 'raskova' &&
                     password.current === 'churrasco2023'
                 ) {
+                    handleRedirectToHomePage()
                     handleDisableButton(true)
                     username.current = ''
                     password.current = ''
-                    handleRedirectToHomePage()
                 }
             }}
         >

@@ -35,6 +35,7 @@ const TaskDetailsMainInput: FC<TaskDetailsMainInputProps> = ({
             })}
             type="text"
             value={value}
+            readOnly
         />
     </div>
 )

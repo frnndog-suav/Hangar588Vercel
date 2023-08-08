@@ -79,6 +79,7 @@ const TaskDetailsSimpleInput: FC<TaskDetailsSimpleInputProps> = ({
                 className={inputStyle({ variant: style })}
                 type="text"
                 value={value}
+                readOnly
             />
         </div>
     )

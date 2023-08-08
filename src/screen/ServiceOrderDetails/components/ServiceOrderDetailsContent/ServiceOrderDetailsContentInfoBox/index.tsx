@@ -1,17 +1,15 @@
 import { genericStyle } from '@/src/styles'
 import { FC } from 'react'
 
-interface TaskDetailsDescriptionProps {
+interface ServiceOrderDetailsContentInfoBoxProps {
+    size: number
     label: string
     value: string
-    size: number
 }
 
-const TaskDetailsDescription: FC<TaskDetailsDescriptionProps> = ({
-    label,
-    size,
-    value
-}) => {
+const ServiceOrderDetailsContentInfoBox: FC<
+    ServiceOrderDetailsContentInfoBoxProps
+> = ({ size, label, value }) => {
     return (
         <div
             className={genericStyle({
@@ -24,23 +22,22 @@ const TaskDetailsDescription: FC<TaskDetailsDescriptionProps> = ({
             })}
         >
             <label>{label}</label>
-            <textarea
-                rows={5}
-                readOnly
-                value={value}
+            <input
                 className={genericStyle({
                     css: {
                         border: '1px solid $battleshipGray',
                         fontSize: 16,
                         padding: 4,
                         borderRadius: 4,
-                        resize: 'none',
                         outline: 'none'
                     }
                 })}
+                type="text"
+                readOnly
+                value={value}
             />
         </div>
     )
 }
 
-export default TaskDetailsDescription
+export default ServiceOrderDetailsContentInfoBox
