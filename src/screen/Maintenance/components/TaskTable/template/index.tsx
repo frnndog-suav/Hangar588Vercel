@@ -9,7 +9,9 @@ const taskMapTableContainer = css({
     borderRadius: 8,
     padding: 36,
     gap: 16,
-    marginTop: 20
+    marginTop: 20,
+    overflowY: 'scroll',
+    height: '50vh'
 })
 
 type TemplateTaskTableProps = {

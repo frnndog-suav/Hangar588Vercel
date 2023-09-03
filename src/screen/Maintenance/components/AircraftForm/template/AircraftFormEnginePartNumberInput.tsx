@@ -17,7 +17,7 @@ const enginePartNumberFormatter = IMask.createPipe({
 
 export default function AircraftFormEnginePartNumberInput() {
     const [enginePartNumber, setEnginePartNumber] =
-        useState<string>('5645351323521321000')
+        useState<string>('')
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
         setEnginePartNumber(e.target.value)

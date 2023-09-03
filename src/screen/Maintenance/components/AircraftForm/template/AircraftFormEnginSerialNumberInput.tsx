@@ -17,7 +17,7 @@ const engineSerialNumberFormatter = IMask.createPipe({
 
 export default function AircraftFormEngineSerialNumberInput() {
     const [engineSerialNumber, setEngineSerialNumber] =
-        useState<string>('54481211200')
+        useState<string>('')
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
         setEngineSerialNumber(e.target.value)

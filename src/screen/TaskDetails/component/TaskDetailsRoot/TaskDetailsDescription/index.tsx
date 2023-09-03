@@ -3,7 +3,7 @@ import { FC } from 'react'
 
 interface TaskDetailsDescriptionProps {
     label: string
-    value: string
+    value?: string
     size: number
 }
 
@@ -35,10 +35,11 @@ const TaskDetailsDescription: FC<TaskDetailsDescriptionProps> = ({
                         padding: 4,
                         borderRadius: 4,
                         resize: 'none',
-                        outline: 'none'
+                        outline: 'none',
+                        whiteSpace: 'pre-line'
                     }
                 })}
-            />
+            ></textarea>
         </div>
     )
 }

@@ -16,7 +16,7 @@ const lastFlightDateFormatter = IMask.createPipe({
 })
 
 const AircraftFormLastFlightDate = () => {
-    const [lastFlightDate, setLastFlightDate] = useState<string>('')
+    const [lastFlightDate, setLastFlightDate] = useState<string>('17/07/2023')
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
         setLastFlightDate(e.target.value)

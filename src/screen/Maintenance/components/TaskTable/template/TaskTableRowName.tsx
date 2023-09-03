@@ -42,7 +42,7 @@ const TaskTableRowName: FC<TaskTableRowNameProps> = ({ task }) => {
                         width: '100%'
                     }
                 })}
-                defaultValue={task.taskName}
+                defaultValue={task.taskTitle}
             />
         </div>
     )

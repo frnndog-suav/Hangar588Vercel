@@ -16,7 +16,7 @@ const aircraftSNFormatter = IMask.createPipe({
 })
 
 export default function AircraftFormSerialNumber() {
-    const [aircraftSN, setAircraftSN] = useState<string>('54481211200')
+    const [aircraftSN, setAircraftSN] = useState<string>('1789')
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
         setAircraftSN(e.target.value)

@@ -19,7 +19,7 @@ export default function AircraftFormCertificationInput() {
                         type="text"
                         required
                         className={aircraftFormInput()}
-                        value="PT-HJK"
+                        value="PR-LLJ"
                     />
                 </Form.Control>
                 <Form.Message match="valueMissing">

@@ -2,20 +2,20 @@ import { TaskCategory } from '../types/mockedTypes'
 
 export const taskCategoryEnumConverter = (taskCategoryText: string) => {
     switch (taskCategoryText) {
-        case 'Componentes':
-            return TaskCategory['Components']
-        case 'Tarefas':
-            return TaskCategory['Task']
-        case 'Boletim AD':
-            return TaskCategory['ReportAD']
-        case 'Boletim AD do motor':
-            return TaskCategory['EngineReportAD']
-        case 'Componente do motor':
-            return TaskCategory['EngineComponents']
-        case 'Estoque virtual':
-            return TaskCategory['VirtualStorage']
-        case 'Motor':
-            return TaskCategory['Engine']
+        case 'Hard Time':
+            return TaskCategory['HT']
+        case 'Last Done Next Do':
+            return TaskCategory['LDND']
+        case 'Life Limited Part':
+            return TaskCategory['LLP']
+        case 'On Condition Monitoring Component':
+            return TaskCategory['OCMC']
+        case 'Line Replaceable Unit':
+            return TaskCategory['LRU']
+        case 'Service Bulletin':
+            return TaskCategory['SB']
+        case 'Airworthiness Directive':
+            return TaskCategory['AD']
         default:
             return TaskCategory['Unknown']
     }

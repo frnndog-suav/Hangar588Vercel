@@ -38,7 +38,7 @@ const inputStyle = css({
 
 interface TaskDetailsSimpleInputProps {
     label: string
-    value: string
+    value?: string
     size: number
     green?: boolean
     blue?: boolean

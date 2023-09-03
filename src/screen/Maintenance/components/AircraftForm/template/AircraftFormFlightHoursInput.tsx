@@ -24,7 +24,7 @@ const flightHoursFormatter = IMask.createPipe({
 })
 
 export default function AircraftFormFlightHoursInput() {
-    const [flightHours, setFlightHours] = useState<string>('')
+    const [flightHours, setFlightHours] = useState<string>('3850.5')
 
     const handleOnChange = (e: ChangeEvent<HTMLInputElement>) => {
         setFlightHours(e.target.value)
@@ -40,7 +40,8 @@ export default function AircraftFormFlightHoursInput() {
                         required
                         onChange={handleOnChange}
                         className={aircraftFormInput()}
-                        value={flightHoursFormatter(flightHours)}
+                        value={flightHours}
+                        // value={flightHoursFormatter(flightHours)}
                     />
                 </Form.Control>
                 <Form.Message match="valueMissing">

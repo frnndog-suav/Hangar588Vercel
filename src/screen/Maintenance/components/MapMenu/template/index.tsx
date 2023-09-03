@@ -68,13 +68,13 @@ const TemplateMapMenu = ({ setSelectedCategory }: TemplateMapMenuProps) => {
                         />
                     </Select.ScrollUpButton>
                     <Select.Viewport>
-                        <MapMenuSelectItem text="Motor" />
-                        <MapMenuSelectItem text="Componentes" />
-                        <MapMenuSelectItem text="Tarefas" />
-                        <MapMenuSelectItem text="Boletim AD" />
-                        <MapMenuSelectItem text="Boletim AD do motor" />
-                        <MapMenuSelectItem text="Componente do motor" />
-                        <MapMenuSelectItem text="Estoque virtual" />
+                        <MapMenuSelectItem text="Hard Time" />
+                        <MapMenuSelectItem text="Last Done Next Do" />
+                        <MapMenuSelectItem text="Life Limited Part" />
+                        <MapMenuSelectItem text="On Condition Monitoring Component" />
+                        <MapMenuSelectItem text="Line Replaceable Unit" />
+                        <MapMenuSelectItem text="Service Bulletin" />
+                        <MapMenuSelectItem text="Airworthiness Directive" />
                     </Select.Viewport>
                 </Select.Content>
             </Select.Portal>

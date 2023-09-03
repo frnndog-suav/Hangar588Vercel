@@ -84,7 +84,7 @@ const ServiceOrderCreationContent = () => {
                                 }
                             })}
                         >
-                            <label>{task.taskName}</label>
+                            <label>{task.taskTitle}</label>
                             <button
                                 onClick={() => removeTask(task.id)}
                                 className={genericStyle({

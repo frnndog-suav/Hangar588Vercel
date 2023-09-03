@@ -19,7 +19,7 @@ export default function AircraftFormOwnerInput() {
                         type="text"
                         required
                         className={aircraftFormInput()}
-                        value="Vicente Alfândega"
+                        value="Daniela Chanel Fukuzaka"
                     />
                 </Form.Control>
                 <Form.Message match="valueMissing">

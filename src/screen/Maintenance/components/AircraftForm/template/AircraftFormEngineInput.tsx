@@ -19,7 +19,7 @@ export default function AircraftFormEngineInput() {
                         type="text"
                         required
                         className={aircraftFormInput()}
-                        value="Tulio Turbinas"
+                        value=""
                     />
                 </Form.Control>
                 <Form.Message match="valueMissing">

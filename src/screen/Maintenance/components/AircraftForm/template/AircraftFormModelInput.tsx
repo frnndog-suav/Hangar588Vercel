@@ -19,7 +19,7 @@ export default function AircraftFormModelInput() {
                         type="text"
                         required
                         className={aircraftFormInput()}
-                        value="Esquilo B4"
+                        value="AS 350 B2"
                     />
                 </Form.Control>
                 <Form.Message match="valueMissing">

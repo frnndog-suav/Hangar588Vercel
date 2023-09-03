@@ -72,7 +72,7 @@ const ServiceOrderCreationTaskMap = () => {
                                 }
                             })}
                         >
-                            {task.taskName}
+                            {task.taskTitle}
                         </label>
                         {!isAlreadySelected(task) && (
                             <button

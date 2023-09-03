@@ -2,11 +2,11 @@ import ScreenContent from '@/src/components/ScreenContent'
 import { mockedServiceOrders } from '@/src/mock/mockedServiceOrders'
 import { useMapMenuStore } from '@/src/store/components/MapMenu/useMapMenuStore'
 import { genericStyle } from '@/src/styles'
+import { TaskCategory } from '@/src/types/mockedTypes'
 import { useRouter } from 'next/router'
 import React, { useEffect } from 'react'
 import { getMockedTasks } from '../Maintenance/components/TaskTable/mock'
 import { ServiceOrderDetailsContent } from './components/ServiceOrderDetailsContent/compound'
-import { TaskCategory } from '@/src/types/mockedTypes'
 
 const ServiceOrderDetailsScreen = () => {
     const router = useRouter()
@@ -18,12 +18,9 @@ const ServiceOrderDetailsScreen = () => {
         state.setSelectedCategory
     ])
 
-    useEffect(
-        () => setSelectedCategory(TaskCategory.Components),
-        [setSelectedCategory]
-    )
+    useEffect(() => setSelectedCategory(TaskCategory.AD), [setSelectedCategory])
 
-    const tasks = getMockedTasks(TaskCategory.Components)
+    const tasks = getMockedTasks(TaskCategory.AD)
 
     return (
         <div

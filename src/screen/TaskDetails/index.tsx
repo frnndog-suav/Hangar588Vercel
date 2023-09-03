@@ -1,5 +1,4 @@
 import ScreenContent from '@/src/components/ScreenContent'
-import { mockedServiceOrderDescription } from '@/src/mock/generalMocks'
 import { useMapMenuStore } from '@/src/store/components/MapMenu/useMapMenuStore'
 import { genericStyle } from '@/src/styles'
 import { useRouter } from 'next/router'
@@ -29,7 +28,7 @@ const TaskDetailsScreen = () => {
                 }
             })}
         >
-            <ScreenContent title={'Detalhes da task'}>
+            <ScreenContent title={'Detalhes da task "' + tasks?.taskTitle + '"'}>
                 <React.Fragment>
                     <p
                         className={genericStyle({
@@ -81,152 +80,152 @@ const TaskDetailsScreen = () => {
                         <TaskDetails.ContentRow>
                             <TaskDetails.SimpleInput
                                 label="Aircraft Type"
-                                value="AS 350"
+                                value={tasks?.aircraftType}
                                 size={1}
                             />
                             <TaskDetails.SimpleInput
                                 label="Revision"
-                                value="023"
+                                value={tasks?.revision}
                                 size={1}
                             />
                             <TaskDetails.SimpleInput
                                 label="Revision Date"
-                                value="01/01/2023"
+                                value={tasks?.revisionDate}
                                 size={1}
                             />
                             <TaskDetails.SimpleInput
                                 label="Issue Date"
-                                value="01/01/2023"
+                                value={tasks?.issueDate}
                                 size={1}
                             />
                             <TaskDetails.SimpleInput
                                 label="ATA Chapter"
-                                value="25"
+                                value={tasks?.ataChapter}
                                 size={1}
                             />
                             <TaskDetails.SimpleInput
                                 label="Chapter Section Subject"
-                                value="01/01/2023"
+                                value={tasks?.chapterSectionSubject}
                                 size={1}
                             />
                             <TaskDetails.SimpleInput
                                 label="ATA Title"
-                                value="Equipments & Furnishing"
+                                value={tasks?.ataTitle}
                                 size={1}
                             />
                         </TaskDetails.ContentRow>
                         <TaskDetails.ContentRow>
                             <TaskDetails.SimpleInput
                                 label="Task Number"
-                                value="25/66/00/000/000/016"
+                                value=""
                                 size={2.5}
                             />
                             <TaskDetails.SimpleInput
                                 label="Task Status (N.R)"
-                                value="N"
+                                value=""
                                 size={2.5}
                             />
-                            {/* <TaskDetails.SimpleInput
+                            <TaskDetails.SimpleInput
                                 label="Task Title"
-                                value={tasks?.taskName ?? ''}
+                                value={tasks?.taskTitle}
                                 size={1}
-                            /> */}
+                            />
                             <TaskDetails.SimpleInput
                                 label="MOD"
-                                value="PRE MOD 074957"
+                                value={tasks?.mod}
                                 size={2.5}
                             />
                             <TaskDetails.SimpleInput
                                 label="Climatic Condition"
-                                value="Salt-laden atmosphere"
+                                value={tasks?.climaticCondition}
                                 size={2.5}
                             />
                         </TaskDetails.ContentRow>
                         <TaskDetails.ContentRow>
                             <TaskDetails.Description
                                 label="Description"
-                                value={mockedServiceOrderDescription}
+                                value={tasks?.description}
                                 size={1}
                             />
                         </TaskDetails.ContentRow>
                         <TaskDetails.ContentRow>
                             <TaskDetails.SimpleInput
                                 label="MPN"
-                                value="76370-110"
+                                value={tasks?.mpn}
                                 size={1}
                             />
                             <TaskDetails.SimpleInput
                                 label="PN"
-                                value="704A41815032"
+                                value={tasks?.pn}
                                 size={1}
                             />
                             <TaskDetails.SimpleInput
                                 label="Linked Task"
-                                value="TBO"
+                                value=""
                                 size={1}
                             />
                             <TaskDetails.SimpleInput
                                 label="Maintenance Mode"
-                                value="N15F210B"
+                                value={tasks?.maintenanceMode}
                                 size={1}
                             />
                             <TaskDetails.SimpleInput
                                 label="Frequency"
-                                value="Periodic"
+                                value={tasks?.frequency}
                                 size={1}
                             />
                             <TaskDetails.SimpleInput
                                 label="Event Type"
-                                value="Periodic"
+                                value={tasks?.eventType}
                                 size={1}
                             />
                         </TaskDetails.ContentRow>
                         <TaskDetails.ContentRow>
                             <TaskDetails.SimpleInput
                                 label="HUMS"
-                                value=""
+                                value={tasks?.fhHums}
                                 size={1}
                                 green
                             />
                             <TaskDetails.SimpleInput
                                 label="Sampling Threshold"
-                                value=""
+                                value={tasks?.fhSamplingThreshold}
                                 size={1}
                                 green
                             />
                             <TaskDetails.SimpleInput
                                 label="Limit 1"
-                                value="600"
+                                value={tasks?.fhLimit}
                                 size={1}
                                 green
                             />
                             <TaskDetails.SimpleInput
                                 label="Unit 1"
-                                value="FH"
+                                value={tasks?.fhUnit}
                                 size={1}
                                 green
                             />
                             <TaskDetails.SimpleInput
                                 label="Provisional 1"
-                                value="No"
+                                value={tasks?.fhProvisionnal}
                                 size={1}
                                 green
                             />
                             <TaskDetails.SimpleInput
                                 label="FS 1"
-                                value=""
+                                value={tasks?.fhFs}
                                 size={1}
                                 green
                             />
                             <TaskDetails.SimpleInput
                                 label="Margin 1"
-                                value="60"
+                                value={tasks?.fhMargin}
                                 size={1}
                                 green
                             />
                             <TaskDetails.SimpleInput
                                 label="Margin Unit 1"
-                                value="FH"
+                                value={tasks?.fhMarginUnit}
                                 size={1}
                                 green
                             />
@@ -234,49 +233,49 @@ const TaskDetailsScreen = () => {
                         <TaskDetails.ContentRow>
                             <TaskDetails.SimpleInput
                                 label="HUMS"
-                                value=""
+                                value={tasks?.calendarHums}
                                 size={1}
                                 blue
                             />
                             <TaskDetails.SimpleInput
                                 label="Sampling Threshold"
-                                value=""
+                                value={tasks?.calendarSamplingThreshold}
                                 size={1}
                                 blue
                             />
                             <TaskDetails.SimpleInput
                                 label="Limit 2"
-                                value="600"
+                                value={tasks?.calendarLimit}
                                 size={1}
                                 blue
                             />
                             <TaskDetails.SimpleInput
                                 label="Unit 2"
-                                value="FH"
+                                value={tasks?.calendarUnit}
                                 size={1}
                                 blue
                             />
                             <TaskDetails.SimpleInput
                                 label="Provisional 2"
-                                value="No"
+                                value={tasks?.calendarProvisionnal}
                                 size={1}
                                 blue
                             />
                             <TaskDetails.SimpleInput
                                 label="FS 2"
-                                value=""
+                                value={tasks?.calendarFs}
                                 size={1}
                                 blue
                             />
                             <TaskDetails.SimpleInput
                                 label="Margin 2"
-                                value="60"
+                                value={tasks?.calendarMargin}
                                 size={1}
                                 blue
                             />
                             <TaskDetails.SimpleInput
                                 label="Margin Unit 2"
-                                value="FH"
+                                value={tasks?.calendarUnit}
                                 size={1}
                                 blue
                             />
@@ -284,49 +283,49 @@ const TaskDetailsScreen = () => {
                         <TaskDetails.ContentRow>
                             <TaskDetails.SimpleInput
                                 label="HUMS"
-                                value=""
+                                value={tasks?.cycleHums}
                                 size={1}
                                 gray
                             />
                             <TaskDetails.SimpleInput
                                 label="Sampling Threshold"
-                                value=""
+                                value={tasks?.cycleSamplingThreshold}
                                 size={1}
                                 gray
                             />
                             <TaskDetails.SimpleInput
                                 label="Limit 3"
-                                value="600"
+                                value={tasks?.cycleLimit}
                                 size={1}
                                 gray
                             />
                             <TaskDetails.SimpleInput
                                 label="Unit 3"
-                                value="FH"
+                                value={tasks?.cycleUnit}
                                 size={1}
                                 gray
                             />
                             <TaskDetails.SimpleInput
                                 label="Provisional 3"
-                                value="No"
+                                value={tasks?.cycleProvisionnal}
                                 size={1}
                                 gray
                             />
                             <TaskDetails.SimpleInput
                                 label="FS 3"
-                                value=""
+                                value={tasks?.cycleFs}
                                 size={1}
                                 gray
                             />
                             <TaskDetails.SimpleInput
                                 label="Margin 3"
-                                value="60"
+                                value={tasks?.cycleMargin}
                                 size={1}
                                 gray
                             />
                             <TaskDetails.SimpleInput
                                 label="Margin Unit 3"
-                                value="FH"
+                                value={tasks?.cycleMarginUnit}
                                 size={1}
                                 gray
                             />
@@ -334,27 +333,27 @@ const TaskDetailsScreen = () => {
                         <TaskDetails.ContentRow>
                             <TaskDetails.SimpleInput
                                 label="Ref Manual"
-                                value=""
+                                value={tasks?.refManual}
                                 size={1}
                             />
                             <TaskDetails.SimpleInput
                                 label="Documentation"
-                                value=""
+                                value={tasks?.documentation}
                                 size={1}
                             />
                             <TaskDetails.SimpleInput
                                 label="Source Document / Code MRB"
-                                value=""
+                                value={tasks?.sourceDocument}
                                 size={1}
                             />
                             <TaskDetails.SimpleInput
                                 label="Zones"
-                                value=""
+                                value={tasks?.zones}
                                 size={1}
                             />
                             <TaskDetails.SimpleInput
                                 label="K-Factor"
-                                value=""
+                                value={tasks?.kFactor}
                                 size={1}
                             />
                         </TaskDetails.ContentRow>
