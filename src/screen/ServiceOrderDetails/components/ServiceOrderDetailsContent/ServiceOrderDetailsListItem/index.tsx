@@ -35,7 +35,7 @@ const ServiceOrderDetailsListItem: FC<ServiceOrderDetailsListItemProps> = ({
             <ServiceOrderDetailsContent.InfoBox
                 label={'Tarefa'}
                 size={1}
-                value={task.taskName}
+                value={task?.taskTitle}
             />
             <ServiceOrderDetailsContent.InfoBox
                 label={'Tempo decorrido'}

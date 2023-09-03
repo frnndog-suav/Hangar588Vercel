@@ -4,7 +4,7 @@ import { FC } from 'react'
 interface ServiceOrderDetailsContentInfoBoxProps {
     size: number
     label: string
-    value: string
+    value?: string
 }
 
 const ServiceOrderDetailsContentInfoBox: FC<
