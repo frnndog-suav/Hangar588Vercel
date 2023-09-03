@@ -5,13 +5,13 @@ interface ServiceOrderTask {
     selectedTasks: TaskTemporary[]
     addTask: (task: TaskTemporary) => void
     clear: () => void
-    removeTask: (taskId: string) => void
+    removeTask: (taskId?: string) => void
 }
 
 const useServiceOrderTask = create<ServiceOrderTask>((set) => ({
     selectedTasks: [],
     clear: () => set({ selectedTasks: [] }),
-    removeTask: (taskId: string) =>
+    removeTask: (taskId?: string) =>
         set((state) => ({
             selectedTasks: state.selectedTasks.filter(
                 (task) => task.id !== taskId

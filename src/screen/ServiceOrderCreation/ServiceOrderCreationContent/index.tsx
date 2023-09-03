@@ -86,7 +86,7 @@ const ServiceOrderCreationContent = () => {
                         >
                             <label>{task.taskTitle}</label>
                             <button
-                                onClick={() => removeTask(task.id)}
+                                onClick={() => removeTask(task?.id)}
                                 className={genericStyle({
                                     css: {
                                         backgroundColor: '$engineeringOrange',
